@@ -1,8 +1,9 @@
+'''Calculation'''
 from decimal import Decimal
 from typing import Callable
-from apps.calculator.operations import add, subtract, multiply, divide
 
 class Calculation:
+    '''class calculation'''
     def __init__(self, a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal],Decimal]):
         self.a = a
         self.b = b
@@ -10,8 +11,12 @@ class Calculation:
 
     @staticmethod
     def create(a: Decimal, b: Decimal, operation: Callable[[Decimal,Decimal],Decimal]):
+        '''define create'''
         return Calculation(a, b, operation)
     def perform(self)-> Decimal:
+        '''perform calculation'''
         return self.operation(self.a, self.b)
     def __repr__(self):
+        '''repr'''
         return f"Calculation({self.a}, {self.b}, {self.operation.__name__})"
+    
