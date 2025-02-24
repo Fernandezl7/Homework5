@@ -1,5 +1,5 @@
 '''My Calculator Test'''
-from app.calculator import Calculator
+from apps.calculator import Calculator
 
 def test_addition():
     '''Test that addition function works '''    
@@ -16,3 +16,4 @@ def test_divide():
 def test_multiply():
     '''Test that multiply function works '''    
     assert Calculator.multiply(2,2) == 4
+    

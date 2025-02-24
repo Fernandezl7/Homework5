@@ -1,8 +1,8 @@
 '''Testing Operations '''
 from decimal import Decimal
 import pytest
-from app.calculator.calculation import Calculation
-from app.calculator.operations import divide
+from apps.calculator.calculation import Calculation
+from apps.calculator.operations import divide
 
 
 def test_operation(a, b, operation, expected):

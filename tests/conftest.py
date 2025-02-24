@@ -1,9 +1,10 @@
 """ TESTConf File """
+# pylint: disable=line-too-long, comparison-with-callable
 # conftest.py
 from decimal import Decimal
 #import pytest
 from faker import Faker
-from app.calculator.operations import add, subtract, multiply, divide
+from apps.calculator.operations import add, subtract, multiply, divide
 
 fake = Faker()
 

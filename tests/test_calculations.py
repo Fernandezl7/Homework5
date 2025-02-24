@@ -2,10 +2,10 @@
 
 from decimal import Decimal
 import pytest
-from app.calculator.calculation import Calculation
-from app.calculator.calculations import Calculations
-from app.calculator.operations import add, subtract
-
+from apps.calculator.calculation import Calculation
+from apps.calculator.calculations import Calculations
+from apps.calculator.operations import add, subtract
+# pylint: disable=line-too-long,unused-argument, redefined-outer-name
 # pytest.fixture is a decorator that marks a function as a fixture,
 # a setup mechanism used by pytest to initialize a test environment.
 # Here, it's used to define a fixture that prepares the test environment for calculations tests.

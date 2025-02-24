@@ -2,11 +2,11 @@
 TEST Calculation
 """
 
-# pylint: disable=unnecessary-dunder-call, invalid-name , redefined-outer-name
+# pylint: disable=unnecessary-dunder-call, invalid-name , redefined-outer-name. line-too-long
 from decimal import Decimal
 import pytest
-from app.calculator.calculation import Calculation
-from app.calculator.operations import add, divide
+from apps.calculator.calculation import Calculation
+from apps.calculator.operations import add, divide
 
 # pytest.mark.parametrize decorator is used to parameterize a test function, enabling it to be called
 # with different sets of arguments. Here, it's used to test various scenarios of arithmetic operations
