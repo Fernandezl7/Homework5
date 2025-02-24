@@ -1,6 +1,7 @@
 '''main'''
 import sys
 from decimal import Decimal, InvalidOperation
+from apps import App
 from apps.calculator import Calculator  # Assuming Calculator is defined as shown previously
 # pylint: disable=too-few-public-methods
 class OperationCommand:
@@ -35,11 +36,24 @@ def calculate_and_print(a, b, operation_name):
 
 def main():
     '''main'''
-    if len(sys.argv) != 4:
-        print("Usage: python calculator_main.py <number1> <number2> <operation>")
+    if len(sys.argv) == 2:
+        app_instance = App()
+        app_instance.start()
+    elif len(sys.argv) == 4:
+        _, a, b, operation_name = sys.argv
+        calculate_and_print(a, b, operation_name)
+    else:
+        print("        Welcome to Command-Plugin based Calculator Application:    ")
+        print("           ")
+        print("Usage of this Calculator:")
+        print("    To start the Interactive Calculator: python main.py I ")
+        print("    To perform the calculation Using Direct Commamd Line:")
+        print("       python main.py <number1> <number2> add")
+        print("       python main.py <number1> <number2> subtract")
+        print("       python main.py <number1> <number2> multiply")
+        print("       python main.py <number1> <number2> divide")
+
         sys.exit(1)
-    _, a, b, operation_name = sys.argv
-    calculate_and_print(a, b, operation_name)
 
 if __name__ == '__main__':
     main()
