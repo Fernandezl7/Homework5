@@ -42,4 +42,4 @@ class CommandHandler:
             self.register_command(plugin_name, command_instance)  # Register the instance
             return command_instance
         raise ValueError(f"Failed to create command: {plugin_name}")
-        
+     
