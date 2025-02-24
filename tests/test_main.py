@@ -2,6 +2,7 @@
 import pytest
 #from app.calculator import Calculator
 from main import calculate_and_print
+
 #pylint:disable=line-too-long
 
 # Parameterize the test function to cover different operations and scenarios, including errors
